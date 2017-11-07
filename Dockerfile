@@ -24,7 +24,7 @@ RUN mkdir -p /usr/src/app && mkdir -p /project
 WORKDIR /usr/src/app
 # only install minimal amount of tessera packages
 # be careful as some tessera packages collide with itself
-# try adding tilelive-merge@1.1.2 to the build
+# adding tilelive-merge@1.1.2 to the build
 RUN npm install \
     mbtiles@0.8.2  \
     tilelive-merge@1.1.2 \

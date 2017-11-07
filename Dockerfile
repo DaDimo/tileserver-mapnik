@@ -22,6 +22,10 @@ ENV MAPNIK_FONT_PATH=/fonts
 
 RUN mkdir -p /usr/src/app && mkdir -p /project
 WORKDIR /usr/src/app
+
+RUN apt-get update && apt-get install -y \
+    libstdc++6
+
 # only install minimal amount of tessera packages
 # be careful as some tessera packages collide with itself
 # adding tilelive-merge@1.1.2 to the build
